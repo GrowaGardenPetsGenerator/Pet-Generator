@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grow a Garden Pet Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Fredoka', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f8fb;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #4CAF50, #2e7d32);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    .username-box {
+      text-align: center;
+      margin: 30px;
+    }
+    .username-box input {
+      padding: 10px;
+      font-size: 1rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      width: 250px;
+      max-width: 80%;
+    }
+    .username-box button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      background: #4CAF50;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .username-box button:hover {
+      background: #388E3C;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .card {
+      background: Green;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 40px 20px;
+      text-align: center;
+      transition: transform 0.2s ease;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .verify-message {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #2e7d32;
+      display: none;
+    }
+    .verify-message a {
+      color: #4CAF50;
+      text-decoration: none;
+      margin-left: 8px;
+    }
+    .verify-message a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background: #222;
+      color: #bbb;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>Grow a Garden Generator</header>
+
+  <!-- Username Entry -->
+  <div class="username-box">
+    <input type="text" id="username" placeholder="Enter your Roblox username">
+    <button onclick="showUsername()">Generate!</button>
+    <p id="output" style="margin-top:15px; font-weight:bold;"></p>
+    <p id="verify" class="verify-message">
+      ✅ Now <a href="https://roblox.com.fj/communities/7727162657/" target="_blank">Verify with group</a>
+    </p>
+  </div>
+
+  <!-- Gallery Section with text only -->
+  <section class="gallery">
+    <div class="card">Dinosaur Egg</div>
+    <div class="card">T-Rex Dinosaur</div>
+    <div class="card">Pterodactyl</div>
+    <div class="card">Disco Bee</div>
+    <div class="card">Queen Bee</div>
+    <div class="card">Red Fox</div>
+    <div class="card">Dragonfly</div>
+    <div class="card">Zombie Chicken</div>
+  </section>
+
+  <footer>
+  Grow a Garden Pet Generator• Made by To Slow ❤️
+  </footer>
+
+  <script>
+    function showUsername() {
+      const username = document.getElementById("username").value;
+      const output = document.getElementById("output");
+      const verify = document.getElementById("verify");
+      if(username.trim() === "") {
+        output.textContent = "⚠️ Please enter a username first.";
+        verify.style.display = "none";
+      } else {
+        output.textContent = "✅ Username " + username + " is ready!";
+        verify.style.display = "block";
+      }
+    }
+  </script>
+
+
+</body></html>
